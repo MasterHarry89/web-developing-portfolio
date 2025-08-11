@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Front-End Developer</title>
+    <style>
+        :root {
+            --primary: #4CAFEE;
+            --secondary: #222;
+            --light: #f4f4f4;
+            --dark: #111;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: var(--dark);
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom right, var(--secondary), var(--dark));
+        }
+
+        header h1 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-top: 10px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: var(--secondary);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #3698d4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--secondary);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">O mně</a>
+        <a href="#projects">Projekty</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+    <header>
+        <h1>Tvůj Jméno</h1>
+        <p>Front-End Developer | HTML • CSS • JS • React</p>
+    </header>
+
+    <section id="about">
+        <h2>O mně</h2>
+        <p>
+            Jsem front-end developer se zaměřením na tvorbu moderních, responzivních a rychlých webů. 
+            Specializuji se na HTML, CSS, JavaScript a React. Rád pomáhám firmám i jednotlivcům vytvářet webové prezentace, které fungují a prodávají.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projekty</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x180" alt="Project 1">
+                <div class="project-info">
+                    <h3>Landing Page – Coffee Shop</h3>
+                    <p>Moderní landing page pro kavárnu s animacemi a responzivním designem.</p>
+                    <a href="#" class="btn" target="_blank">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x180" alt="Project 2">
+                <div class="project-info">
+                    <h3>Weather App – React</h3>
+                    <p>Webová aplikace pro zobrazení počasí s využitím veřejného API.</p>
+                    <a href="#" class="btn" target="_blank">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x180" alt="Project 3">
+                <div class="project-info">
+                    <h3>Portfolio Template</h3>
+                    <p>Minimalistická šablona portfolia pro webdesignéry a vývojáře.</p>
+                    <a href="#" class="btn" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>📧 <a href="mailto:tvoje@email.cz">tvoje@email.cz</a></p>
+        <p>💼 <a href="https://www.upwork.com/" target="_blank">Upwork profil</a></p>
+        <p>🔗 <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></p>
+    </section>
+
+    <footer>
+        &copy; 2025 Tvoje Jméno | Všechna práva vyhrazena
+    </footer>
+
+    <script>
+        // Efekt při scrollování
+        document.addEventListener('scroll', () => {
+            document.querySelectorAll('section').forEach(sec => {
+                let rect = sec.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    sec.style.opacity = 1;
+                    sec.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
 

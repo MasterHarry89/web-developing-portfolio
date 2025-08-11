@@ -32,7 +32,10 @@
             font-size: 3rem;
             animation: fadeIn 2s ease-in-out;
         }
+        header img {
 
+         border-radius:50%;
+        }
         header p {
             font-size: 1.2rem;
             color: var(--primary);

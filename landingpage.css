@@ -34,7 +34,7 @@
         }
         header img {
    height: 30%;
-         
+         aspect-ratio:1/1;
          border-radius:50%;
         }
         header p {

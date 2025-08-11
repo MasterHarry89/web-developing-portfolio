@@ -34,8 +34,9 @@
         }
         header img {
    height: 30%;
+         width:auto;
          aspect-ratio:1/1;
-         object-fit: cover;
+         
          border-radius:50%;
         }
         header p {

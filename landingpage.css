@@ -33,7 +33,7 @@
             animation: fadeIn 2s ease-in-out;
         }
         header img {
-   height: 10vh;
+   height: 10%;
          border-radius:50%;
         }
         header p {

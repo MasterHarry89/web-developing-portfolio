@@ -33,11 +33,13 @@
             animation: fadeIn 2s ease-in-out;
         }
         header img {
-   height: 30%;
+         height: 30%;
          width:auto;
          aspect-ratio:1/1;
-         
          border-radius:50%;
+         .avatar {
+         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
         }
         header p {
             font-size: 1.2rem;
